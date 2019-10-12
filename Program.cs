@@ -2,12 +2,12 @@ using System.Windows.Forms;
 
 namespace UmlautShortcut
 {
-    internal class Program
+    public class Program
     {
         private static void Main(string[] args)
         {
             KeyHook.Start();
-            Application.Run();
+            Application.Run(new TrayIconContext());
             KeyHook.Stop();
         }
     }
